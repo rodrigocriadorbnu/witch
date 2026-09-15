@@ -1,0 +1,680 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    background: #000;
+
+    color: #fff;
+
+}
+
+
+/* =========================
+   VÍDEO
+========================= */
+
+#background-video {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -3;
+
+}
+
+
+/* Escurece o vídeo */
+
+.video-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.75)
+        );
+
+    z-index: -2;
+
+}
+
+
+/* =========================
+   SITE
+========================= */
+
+#main-site {
+
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 35px 7%;
+
+}
+
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+.witch-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+}
+
+
+.status-light {
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+}
+
+
+.status-light.online {
+
+    background: #9cff00;
+
+    box-shadow:
+        0 0 8px #9cff00,
+        0 0 18px #9cff00;
+
+}
+
+
+.status-light.offline {
+
+    background: #ff2020;
+
+    box-shadow:
+        0 0 8px #ff2020,
+        0 0 18px #ff2020;
+
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.main-content {
+
+    min-height: calc(100vh - 100px);
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.intro {
+
+    position: absolute;
+
+    top: 18%;
+
+    left: 7%;
+
+    max-width: 420px;
+
+}
+
+
+.intro h1 {
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.intro p {
+
+    font-size: 18px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.action-buttons {
+
+    display: flex;
+
+    gap: 120px;
+
+    margin-top: 250px;
+
+}
+
+
+.action-button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.action-button:hover {
+
+    transform: scale(1.08);
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #aaa;
+
+}
+
+
+/* =========================
+   CARD PIX
+========================= */
+
+.pix-card {
+
+    position: absolute;
+
+    right: 7%;
+
+    top: 25%;
+
+    width: 175px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    background: rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+.pix-card p {
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+
+}
+
+
+.qr-code {
+
+    display: block;
+
+    width: 85px;
+    height: 85px;
+
+    object-fit: cover;
+
+    margin: 10px auto 0;
+
+}
+
+
+/* =========================
+   TELAS
+========================= */
+
+.hidden-screen {
+
+    display: none;
+
+}
+
+
+.hidden-screen.active {
+
+    display: flex;
+
+}
+
+
+/* =========================
+   PAPEL
+========================= */
+
+.hidden-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0,0,0,0.75);
+
+}
+
+
+.paper {
+
+    position: relative;
+
+    width: min(600px, 90%);
+
+    min-height: 500px;
+
+    padding: 55px;
+
+    background:
+        #e8dfc8;
+
+    color: #171717;
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,0.8);
+
+    transform: rotate(-1deg);
+
+}
+
+
+.paper h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.paper p {
+
+    margin-bottom: 20px;
+
+}
+
+
+textarea {
+
+    width: 100%;
+
+    height: 230px;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px;
+
+    background:
+        repeating-linear-gradient(
+            transparent,
+            transparent 30px,
+            rgba(0,0,0,0.12) 31px
+        );
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+}
+
+
+.close-button {
+
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}
+
+
+.send-button {
+
+    margin-top: 20px;
+
+    padding: 13px 28px;
+
+    border: none;
+
+    background: #171717;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.send-button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   FEITIÇO
+========================= */
+
+.spell-paper {
+
+    min-height: 600px;
+
+}
+
+
+.spell-image {
+
+    display: block;
+
+    width: 160px;
+    height: 160px;
+
+    object-fit: cover;
+
+    margin: 0 auto 20px;
+
+    filter: grayscale(100%);
+
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.result-screen {
+
+    background: #050505;
+
+}
+
+
+.result-content {
+
+    max-width: 600px;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.result-content h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    margin: 20px 0;
+
+}
+
+
+.result-content p {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+}
+
+
+#result-symbol {
+
+    font-size: 60px;
+
+}
+
+
+/* =========================
+   OFFLINE
+========================= */
+
+.offline-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #000;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.offline-screen.active {
+
+    display: flex;
+
+}
+
+
+.offline-content h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.offline-content p {
+
+    opacity: 0.5;
+
+}
+
+
+.offline-symbol {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+
+        padding: 25px;
+
+    }
+
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+
+    .witch-status {
+
+        font-size: 13px;
+
+    }
+
+
+    .intro {
+
+        top: 15%;
+
+        left: 25px;
+
+        right: 25px;
+
+    }
+
+
+    .intro h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .action-buttons {
+
+        gap: 40px;
+
+        margin-top: 280px;
+
+    }
+
+
+    .action-button {
+
+        font-size: 23px;
+
+    }
+
+
+    .pix-card {
+
+        display: none;
+
+    }
+
+
+    .paper {
+
+        padding: 35px 25px;
+
+    }
+
+}

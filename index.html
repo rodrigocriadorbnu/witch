@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Bruxa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         VÍDEO DE FUNDO
+    ========================== -->
+
+    <video
+        id="background-video"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src="assets/bruxa.mp4" type="video/mp4">
+    </video>
+
+
+    <!-- Camada escura sobre o vídeo -->
+
+    <div class="video-overlay"></div>
+
+
+    <!-- =========================
+         MÚSICA DE FUNDO
+    ========================== -->
+
+    <audio
+        id="background-music"
+        loop
+    >
+        <source src="assets/fundo.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         SITE PRINCIPAL
+    ========================== -->
+
+    <main id="main-site">
+
+
+        <!-- CABEÇALHO -->
+
+        <header class="site-header">
+
+            <div class="logo">
+                <img src="assets/logo.png" alt="">
+            </div>
+
+
+            <div class="witch-status">
+
+                <span>
+                    Belladonna
+                </span>
+
+                <span
+                    id="status-light"
+                    class="status-light online"
+                ></span>
+
+                <span id="status-text">
+                    Online
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             CONTEÚDO PRINCIPAL
+        ========================== -->
+
+        <section class="main-content">
+
+
+            <!-- TEXTO / APRESENTAÇÃO -->
+
+            <div class="intro">
+
+                <h1>
+                    Os seus desejos
+                    podem chegar até mim.
+                </h1>
+
+                <p>
+                    Mas tenha cuidado com aquilo
+                    que deseja.
+                </p>
+
+            </div>
+
+
+
+            <!-- BOTÕES -->
+
+            <div class="action-buttons">
+
+
+                <button
+                    id="pedido-button"
+                    class="action-button"
+                    type="button"
+                >
+
+                    Pedido
+
+                </button>
+
+
+
+                <button
+                    id="feitico-button"
+                    class="action-button"
+                    type="button"
+                >
+
+                    Feitiço das
+                    <br>
+                    sombras
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 AVISO / PIX
+            ========================== -->
+
+            <aside class="pix-card">
+
+                <p>
+                    Se o seu pedido foi atendido,
+                    não se esqueça de agradecer,
+                    pois o destino pode ser
+                    implacável.
+                </p>
+
+                <p>
+                    Seu coração nunca foi bom.
+                    O que o torna perigoso é que
+                    o seu medo é ainda maior.
+                </p>
+
+
+                <img
+                    src="assets/qr.jpg"
+                    alt="QR Code para agradecimento"
+                    class="qr-code"
+                >
+
+            </aside>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         TELA DO PEDIDO
+    ========================== -->
+
+    <section
+        id="request-screen"
+        class="hidden-screen"
+    >
+
+        <div class="paper">
+
+            <button
+                class="close-button"
+                id="close-request"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+            <h2>
+                Faça seu pedido
+            </h2>
+
+
+            <p>
+                Escreva abaixo aquilo que deseja.
+            </p>
+
+
+            <textarea
+                id="request-text"
+                placeholder="Escreva seu pedido..."
+            ></textarea>
+
+
+            <button
+                id="send-request"
+                class="send-button"
+                type="button"
+            >
+                Enviar pedido
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TELA DO FEITIÇO
+    ========================== -->
+
+    <section
+        id="spell-screen"
+        class="hidden-screen"
+    >
+
+        <div class="paper spell-paper">
+
+            <button
+                class="close-button"
+                id="close-spell"
+                type="button"
+            >
+                ✕
+            </button>
+
+
+            <img
+                src="assets/cabeca_sem_fundo.png"
+                alt="Imagem do feitiço"
+                class="spell-image"
+            >
+
+
+            <h2>
+                Feitiço das sombras
+            </h2>
+
+
+            <p>
+                Escreva aquilo que deseja
+                entregar às sombras.
+            </p>
+
+
+            <textarea
+                id="spell-text"
+                placeholder="Escreva aqui..."
+            ></textarea>
+
+
+            <button
+                id="send-spell"
+                class="send-button"
+                type="button"
+            >
+                Enviar feitiço
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TELA DE CONCLUSÃO
+    ========================== -->
+
+    <section
+        id="result-screen"
+        class="result-screen hidden-screen"
+    >
+
+        <div class="result-content">
+
+            <div id="result-symbol">
+                ✦
+            </div>
+
+
+            <h2>
+                O ritual foi concluído.
+            </h2>
+
+
+            <p id="result-message">
+                Sua mensagem foi recebida.
+            </p>
+
+
+            <button
+                id="return-button"
+                class="send-button"
+                type="button"
+            >
+                Voltar
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TELA OFFLINE
+    ========================== -->
+
+    <section
+        id="offline-screen"
+        class="offline-screen"
+    >
+
+        <div class="offline-content">
+
+            <div class="offline-symbol">
+                ☾
+            </div>
+
+            <h1>
+                Em breve estarei de volta.
+            </h1>
+
+            <p>
+                As sombras precisam descansar.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
