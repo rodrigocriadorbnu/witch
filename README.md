@@ -2,6 +2,8 @@
 
 Site oficial da personagem fictícia **Coração de Pedra**.
 
+Acesse: https://rodrigocriadorbnu.github.io/witch/
+
 Uma experiência digital inspirada em ocultismo, fantasia sombria e estética black metal.
 
 ## 🔮 Sobre o projeto
